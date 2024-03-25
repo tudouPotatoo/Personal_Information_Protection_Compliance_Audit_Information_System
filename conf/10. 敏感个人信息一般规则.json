@@ -1,0 +1,54 @@
+{
+    "SensitiveInfo":
+    {
+        "UserConsent":
+        {
+            "status":1,
+            "data":
+            {
+
+            }
+        },
+        "GuardianConsent":
+        {
+            "status":1,
+            "data":
+            {
+
+            }
+        },
+        "DealWay":
+        {
+            "status":1,
+            "data":
+            {
+                "dealSensitiveInfoWay":"脱敏",
+                "dealSensitiveInfoPurpose":"司机联系乘客"
+            }
+        },
+        "CloseCorrelation":
+        {
+            "status":1,
+            "data":
+            {
+                "Principle":"非必要不处理"
+            }
+        },
+        "ImpactAssessment":
+        {
+            "status":1,
+            "data":
+            {
+                "impactAssessmentResults":""
+            }
+        },
+        "WrittenConsent":
+        {
+            "status":1,
+            "data":
+            {
+                "consentFiles":""
+            }
+        }
+    }
+}

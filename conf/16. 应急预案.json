@@ -1,0 +1,14 @@
+{
+    "EmergencyPlan":
+    {
+        "RegularExecution":
+        {
+            "status":1,
+            "data":
+            {
+                "trainingTime":"",
+                "trainingContent":""
+            }
+        }
+    }
+}

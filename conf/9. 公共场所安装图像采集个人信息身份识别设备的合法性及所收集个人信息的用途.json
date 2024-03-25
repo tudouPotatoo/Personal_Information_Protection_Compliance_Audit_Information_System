@@ -1,0 +1,21 @@
+{
+    "PublicCollection":
+    {
+        "SetSigns":
+        {
+            "status":1,
+            "data":
+            {
+
+            }
+        },
+        "OtherPurpose":
+        {
+            "status":1,
+            "data":
+            {
+                "purpose":"用途"
+            }
+        }
+    }
+}

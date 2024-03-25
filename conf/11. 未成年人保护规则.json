@@ -1,0 +1,25 @@
+{
+    "MinorsProtection":
+    {
+        "Rules":
+        {
+            "status":1,
+            "data":
+            {
+                "rules":""
+            }
+        },
+        "DealWay":
+        {
+            "status":1,
+            "data":
+            {
+                "personalInfoType":"基本信息|敏感信息",
+                "dealPurpose":"",
+                "dealWay":"数据分析",
+                "necessity":48,
+                "protectiveMeasures":""
+            }
+        }
+    }
+}

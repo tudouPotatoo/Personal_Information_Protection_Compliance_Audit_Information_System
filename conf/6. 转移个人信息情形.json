@@ -1,0 +1,24 @@
+{
+    "TransferUserInfo":
+    {
+        "AccepterInfo":
+        {
+            "status":1,
+            "data":
+            {
+                "name":"xx公司",
+                "phone":13031010001
+            }
+        },
+        "ChangeDealWay":
+        {
+            "status":1,
+            "data":
+            {
+                "dealWay":"数据统计",
+                "dealPurpose":"",
+                "dealScope":""
+            }
+        }
+    }
+}

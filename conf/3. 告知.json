@@ -1,0 +1,30 @@
+{
+    "Inform":
+    {
+        "DealWay":
+        {
+            "status":1,
+            "data":
+            {
+                "dealWay":"数据统计"
+            }
+        },
+        "ChangeDealWay":
+        {
+            "status":1,
+            "data":
+            {
+                "dealWayBefore":"使用",
+                "dealWayAfter":"共享"
+            }
+        },
+        "OnlineInform":
+        {
+            "status":1,
+            "data":
+            {
+                "InformWay":"文本 | 链接"
+            }
+        }
+    }
+}

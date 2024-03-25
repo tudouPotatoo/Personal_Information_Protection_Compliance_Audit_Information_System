@@ -1,0 +1,23 @@
+{
+    "InternetPlatformSupervision":
+    {
+        "RegularExeDealWay":
+        {
+            "status":1,
+            "data":
+            {
+                "reviewer":"",
+                "reviewTime":""
+            }
+        },
+        "RegularCheckLaw":
+        {
+            "status":1,
+            "data":
+            {
+                "reviewer":"",
+                "reviewTime":""
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "RulesExplianation":
+    {
+        "UserRequest":
+        {
+            "status":1,
+            "data":
+            {
+                "way":""
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "DealLegitimacy":
+    {
+        "UserConsent":
+        {
+            "status":1,
+            "data":
+            {
+                
+            }
+        },
+        "UserReConsent":
+        {
+            "status":1,
+            "data":
+            {
+                
+            }
+        },
+        "WithdrawalConsentMethod":
+        {
+            "status":1,
+            "data":
+            {
+                "方式":""
+            }
+        },
+        "UserConsentOptRecords":
+        {
+            "status":1,
+            "data":
+            {
+                "userID":"10001",
+                "userOpt":1
+            }
+        },
+        "DealInfoScene":
+        {
+            "status":1,
+            "data":
+            {
+                "scene":1 
+            }
+        }        
+    }
+}

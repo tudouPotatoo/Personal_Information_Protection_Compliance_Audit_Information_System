@@ -1,0 +1,457 @@
+{
+    "DealLegitimacy": {
+        "UserConsent": {
+            "status": 1,
+            "data": {}
+        },
+        "UserReConsent": {
+            "status": 0,
+            "data": {}
+        },
+        "WithdrawalConsentMethod": {
+            "status": 1,
+            "data": {
+                "方式": ""
+            }
+        },
+        "UserConsentOptRecords": {
+            "status": 1,
+            "data": {
+                "userID": "10001",
+                "userOpt": 1
+            }
+        },
+        "DealInfoScene": {
+            "status": 1,
+            "data": {
+                "scene": 1
+            }
+        }
+    },
+    "SensitiveInfo": {
+        "UserConsent": {
+            "status": 1,
+            "data": {}
+        },
+        "GuardianConsent": {
+            "status": 0,
+            "data": {}
+        },
+        "DealWay": {
+            "status": 0,
+            "data": {
+                "dealSensitiveInfoWay": "脱敏",
+                "dealSensitiveInfoPurpose": "司机联系乘客"
+            }
+        },
+        "CloseCorrelation": {
+            "status": 0,
+            "data": {
+                "Principle": "非必要不处理"
+            }
+        },
+        "ImpactAssessment": {
+            "status": 0,
+            "data": {
+                "impactAssessmentResults": ""
+            }
+        },
+        "WrittenConsent": {
+            "status": 0,
+            "data": {
+                "consentFiles": ""
+            }
+        }
+    },
+    "MinorsProtection": {
+        "Rules": {
+            "status": 0,
+            "data": {
+                "rules": ""
+            }
+        },
+        "DealWay": {
+            "status": 0,
+            "data": {
+                "personalInfoType": "基本信息|敏感信息",
+                "dealPurpose": "",
+                "dealWay": "数据分析",
+                "necessity": 48,
+                "protectiveMeasures": ""
+            }
+        }
+    },
+    "PersonalInfoRightsPro": {
+        "UserOptMethods": {
+            "status": 0,
+            "data": {
+                "optWays": ""
+            }
+        }
+    },
+    "RulesExplianation": {
+        "UserRequest": {
+            "status": 0,
+            "data": {
+                "way": ""
+            }
+        }
+    },
+    "EducationTrainingPlan": {
+        "RegularExecution": {
+            "status": 0,
+            "data": {
+                "trainingTime": "",
+                "assessmentTime": ""
+            }
+        }
+    },
+    "ResponsiblePerson": {
+        "Ability": {
+            "status": 0,
+            "data": {
+                "trainingTime": "",
+                "assessmentTime": ""
+            }
+        },
+        "Duty": {
+            "status": 0,
+            "data": {
+                "trainingTime": "",
+                "assessmentTime": ""
+            }
+        },
+        "NominationRights": {
+            "status": 0,
+            "data": {
+                "trainingTime": "",
+                "assessmentTime": ""
+            }
+        },
+        "DecisionMakingPower": {
+            "status": 0,
+            "data": {
+                "trainingTime": "",
+                "assessmentTime": ""
+            }
+        },
+        "ErrorCorrectionRight": {
+            "status": 0,
+            "data": {
+                "trainingTime": "",
+                "assessmentTime": ""
+            }
+        },
+        "Info": {
+            "status": 0,
+            "data": {
+                "infoDisclosure": "",
+                "infoReport": "",
+                "Name": "",
+                "phone": ""
+            }
+        }
+    },
+    "EmergencyPlan": {
+        "RegularExecution": {
+            "status": 0,
+            "data": {
+                "trainingTime": "",
+                "trainingContent": ""
+            }
+        }
+    },
+    "PersonalInfoProImpactAssessment": {
+        "StrorageTime": {
+            "status": 0,
+            "data": {
+                "recordTime": ""
+            }
+        }
+    },
+    "InternetPlatformSupervision": {
+        "RegularExeDealWay": {
+            "status": 0,
+            "data": {
+                "reviewer": "",
+                "reviewTime": ""
+            }
+        },
+        "RegularCheckLaw": {
+            "status": 0,
+            "data": {
+                "reviewer": "",
+                "reviewTime": ""
+            }
+        }
+    },
+    "DealRule": {
+        "DealerInfo": {
+            "status": 0,
+            "data": {
+                "name": "xx出行公司",
+                "email": "123@163.com",
+                "tel": "010-12345670",
+                "phone": 13031010001
+            }
+        },
+        "UserInfoList": {
+            "status": 0,
+            "data": {
+                "phone": 13031010001,
+                "startTime": "",
+                "endTime": "",
+                "departure": "",
+                "destination": "",
+                "payMethod": "wechat",
+                "payTime": "",
+                "payAmount": 68
+            }
+        },
+        "UserInfoDealWay": {
+            "status": 0,
+            "data": {
+                "dealWay": "数据统计",
+                "dealPurpose": "",
+                "dealScope": ""
+            }
+        },
+        "UserInfoStorage": {
+            "status": 0,
+            "data": {
+                "storageTime": 24,
+                "endDealWay": ""
+            }
+        },
+        "UserConsentOptRecords": {
+            "status": 0,
+            "data": {
+                "handleWay": ""
+            }
+        },
+        "ThiredDealerInfo": {
+            "status": 0,
+            "data": {
+                "thirdName": "xx出行公司",
+                "thirdTel": "010-12345670",
+                "personalInfoType": "基本信息|敏感信息",
+                "dealWay": "数据统计",
+                "dealPurpose": "",
+                "dealScope": ""
+            }
+        }
+    },
+    "Inform": {
+        "DealWay": {
+            "status": 0,
+            "data": {
+                "dealWay": "数据统计"
+            }
+        },
+        "ChangeDealWay": {
+            "status": 0,
+            "data": {
+                "dealWayBefore": "使用",
+                "dealWayAfter": "共享"
+            }
+        },
+        "OnlineInform": {
+            "status": 0,
+            "data": {
+                "InformWay": "文本 | 链接"
+            }
+        }
+    },
+    "JointDeal": {
+        "AgreedObligRespon": {
+            "status": 0,
+            "data": {
+                "dealerObligations": "xxx",
+                "dealerResponsibilities": "xxx",
+                "ownerObligations": "xxx",
+                "ownerResponsibilities": "xxx"
+            }
+        },
+        "ProtectiveMeasures": {
+            "status": 0,
+            "data": {
+                "DealerMeasures": "xxx",
+                "UserMeasures": "xxx"
+            }
+        },
+        "ReportingMechanism": {
+            "status": 0,
+            "data": {
+                "MechanismContent": "xxx"
+            }
+        },
+        "TakeResponsibility": {
+            "status": 0,
+            "data": {
+                "DealerResponsibility": "xxx",
+                "UserResponsibility": "xxx"
+            }
+        }
+    },
+    "Entrust": {
+        "ImpactAssessment": {
+            "status": 0,
+            "data": {
+                "evaluationAgency": "xxx第三方评估机构",
+                "evaluationFile": "xxx",
+                "evaluationResult": "合格"
+            }
+        },
+        "ContractContent": {
+            "status": 0,
+            "data": {
+                "personalInfoType": "基本信息|敏感信息",
+                "dealPurpose": "",
+                "dealWay": "数据分析",
+                "dealLimitedTime": 48,
+                "technicalMeasures": "",
+                "managementMeasures": ""
+            }
+        },
+        "RegularInspections": {
+            "status": 0,
+            "data": {
+                "InspectionTime": "",
+                "InspectionWay": ""
+            }
+        },
+        "ContractTermination": {
+            "status": 0,
+            "data": {
+                "已返还委托方": 1,
+                "已删除": 1
+            }
+        }
+    },
+    "TransferUserInfo": {
+        "AccepterInfo": {
+            "status": 0,
+            "data": {
+                "name": "xx公司",
+                "phone": 13031010001
+            }
+        },
+        "ChangeDealWay": {
+            "status": 0,
+            "data": {
+                "dealWay": "数据统计",
+                "dealPurpose": "",
+                "dealScope": ""
+            }
+        }
+    },
+    "Provide": {
+        "UserConsent": {
+            "status": 0,
+            "data": {}
+        },
+        "AccepterInfo": {
+            "status": 0,
+            "data": {
+                "personalInfoType": "基本信息|敏感信息",
+                "dealPurpose": "",
+                "dealWay": "数据分析",
+                "dealLimitedTime": 48,
+                "technicalMeasures": "",
+                "managementMeasures": ""
+            }
+        },
+        "ChangeDealWay": {
+            "status": 0,
+            "data": {
+                "dealWayBefore": "使用",
+                "dealWayAfter": "共享"
+            }
+        }
+    },
+    "AutomatedDecision": {
+        "Content": {
+            "status": 0,
+            "data": {
+                "personalInfoType": "基本信息|敏感信息",
+                "basicPrinciples": "",
+                "logicalMechanism": "",
+                "influence": ""
+            }
+        },
+        "AlgorithmModelSecurityEvaluation": {
+            "status": 0,
+            "data": {
+                "dealBefore": 1,
+                "dealAfter": 1
+            }
+        },
+        "TechnologyEthicsReview": {
+            "status": 0,
+            "data": {
+                "reviewAgency": "xxx第三方评估机构",
+                "reviewFile": "xxx",
+                "reviewResult": "合格"
+            }
+        },
+        "ImpactAssessment": {
+            "status": 0,
+            "data": {
+                "evaluationAgency": "xxx第三方评估机构",
+                "evaluationFile": "xxx",
+                "evaluationResult": "合格"
+            }
+        },
+        "ProtectiveMechanism": {
+            "status": 0,
+            "data": {
+                "MechanismContent": "",
+                "Instructions": ""
+            }
+        },
+        "DeleteUserTags": {
+            "status": 0,
+            "data": {
+                "DeleteWay": "按钮"
+            }
+        },
+        "AlgorithmParameterProtectionMeasures": {
+            "status": 0,
+            "data": {
+                "measure": "xxx"
+            }
+        },
+        "ManualInterventionRecords": {
+            "status": 0,
+            "data": {
+                "userID": "10001",
+                "opeTime": "",
+                "optContent": "操作内容"
+            }
+        },
+        "Rejecte": {
+            "status": 0,
+            "data": {
+                "refuseWay": "拒绝方式"
+            }
+        },
+        "RejecteUserPreferencesAnalysis": {
+            "status": 0,
+            "data": {
+                "refuseMeasure": "拒绝措施"
+            }
+        }
+    },
+    "PublicCollection": {
+        "SetSigns": {
+            "status": 0,
+            "data": {}
+        },
+        "OtherPurpose": {
+            "status": 0,
+            "data": {
+                "purpose": "用途"
+            }
+        }
+    }
+}

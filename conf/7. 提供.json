@@ -1,0 +1,35 @@
+{
+    "Provide":
+    {
+        "UserConsent":
+        {
+            "status":1,
+            "data":
+            {
+
+            }
+        },
+        "AccepterInfo":
+        {
+            "status":1,
+            "data":
+            {
+                "personalInfoType":"基本信息|敏感信息",
+                "dealPurpose":"",
+                "dealWay":"数据分析",
+                "dealLimitedTime":48,
+                "technicalMeasures":"",
+                "managementMeasures":""
+            }
+        },
+        "ChangeDealWay":
+        {
+            "status":1,
+            "data":
+            {
+                "dealWayBefore":"使用",
+                "dealWayAfter":"共享"
+            }
+        }
+    }
+}

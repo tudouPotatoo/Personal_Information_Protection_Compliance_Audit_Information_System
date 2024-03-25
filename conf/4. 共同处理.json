@@ -1,0 +1,43 @@
+{
+    "JointDeal":
+    {
+        "AgreedObligRespon":
+        {
+            "status":1,
+            "data":
+            {
+                "dealerObligations":"xxx",
+                "dealerResponsibilities":"xxx",
+                "ownerObligations":"xxx",
+                "ownerResponsibilities":"xxx"
+            }
+        },
+        "ProtectiveMeasures":
+        {
+            "status":1,
+            "data":
+            {
+                "DealerMeasures":"xxx",
+                "UserMeasures":"xxx"
+            }
+        },
+        "ReportingMechanism":
+        {
+            "status":1,
+            "data":
+            {
+                "MechanismContent":"xxx"
+            }
+        },
+        "TakeResponsibility":
+        {
+            "status":1,
+            "data":
+            {
+                "DealerResponsibility":"xxx",
+                "UserResponsibility":"xxx"
+            }
+        }
+        
+    }
+}
