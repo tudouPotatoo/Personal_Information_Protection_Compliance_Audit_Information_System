@@ -1,6 +1,6 @@
 import json
 import os
-from typing import List
+from typing import List, Any
 import csv
 import xmlContent
 import xmlMatch
@@ -71,10 +71,8 @@ def search2(content, key) -> bool:
     pass
 
 
-def draw_content(filename) -> str:
+def draw_content(filename) -> Any:
     # 提取内容
-    # 获取文件对象
-    f = open(filename)
     # 读取文件的后缀名
     extension = filename.split(".")[-1].lower()
 
@@ -124,8 +122,8 @@ def process(Log_file_name: str, load_info: dict):
 
 def main():
     load_info = {}
-    # Log_file_name = "./log/log.xml"
-    Log_file_name = "./log/log.csv"
+    Log_file_name = "./log/log.xml"
+    # Log_file_name = "./log/log.csv"
     # 1 读取配置信息到 load_info 中
     load_conf_info(load_info)
 
