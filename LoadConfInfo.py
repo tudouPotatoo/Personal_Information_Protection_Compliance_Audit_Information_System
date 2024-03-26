@@ -71,7 +71,7 @@ def search2(content, key) -> bool:
     pass
 
 
-def draw_content(filename) -> Any:
+def extract_content(filename) -> Any:
     # 提取内容
     # 读取文件的后缀名
     extension = filename.split(".")[-1].lower()
@@ -105,8 +105,14 @@ def read_csv_to_map(file_path):
     return data_map
 
 def process(Log_file_name: str, load_info: dict):
+    """
+        读取日志文件，将匹配信息写入 load_info 中
+    :param Log_file_name:
+    :param load_info:
+    :return:
+    """
     # 1 提取日志内容
-    content = draw_content(Log_file_name)
+    content = extract_content(Log_file_name)
     # 遍历一级标题及其对应的vale
     for key, value in load_info.items():
         # 遍历二级标题及其对应的value
