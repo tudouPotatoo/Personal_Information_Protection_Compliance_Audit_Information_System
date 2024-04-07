@@ -4,6 +4,8 @@ from typing import List, Any
 import csv
 import xmlContent
 import xmlMatch
+from rapidfuzz.process import extractOne
+import time
 
 def get_filepath_list(directory: str) -> List[str]:
     """
@@ -53,16 +55,27 @@ def save_to_json(info: dict) -> None:
 def search(content, key, file_type) -> bool:
     extension = file_type.lower()
     if extension == "csv":
-        # 获取key对应的value
-        value = content.get(key)
-        # 遍历value中的每一个内容
-        if value is not None:
-            for item in value:
-                # 如果内容不为空/空白符 说明有内容 则返回true
-                if item.strip():
-                    return True
-        # 如果所有行都为空 则说明没有内容 返回false
-        return False
+
+        # 遍历content中的每一个键，找到与参数key匹配度最高的那个键
+        # 如果这个匹配值>阈值，则认为是同一个键，如果对应的列存在内容，则返回true
+        matchResult = extractOne(key, content.keys())
+        matchKey = matchResult[0]
+        matchRatio = matchResult[1]
+
+        if matchRatio >= 60:
+            print("matchKey:", matchKey, "; key:", key, "; ratio:", matchRatio)
+            # 获取key对应的value
+            value = content.get(matchKey)
+            # 遍历value中的每一个内容
+            if value is not None:
+                for item in value:
+                    # 如果内容不为空/空白符 说明有内容 则返回true
+                    if item.strip():
+                        return True
+            # 如果所有行都为空 则说明没有内容 返回false
+            return False
+        else:
+            return False
     elif extension == "xml":
         return xmlMatch.match_xml(content, key)
 
@@ -121,9 +134,13 @@ def process(Log_file_name: str, load_info: dict):
 
 
 def main():
+    # 记录开始时间
+    start_time = time.time()
+
     load_info = {}
-    Log_file_name = "./log/log.xml"
-    # Log_file_name = "./log/log.csv"
+    # Log_file_name = "./log/log.xml"
+    Log_file_name = "./log/log.csv"
+    # Log_file_name = "./log/log(big).csv"
     # 1 读取配置信息到 load_info 中
     load_conf_info(load_info)
 
@@ -132,6 +149,14 @@ def main():
 
     # 3 将 load_info 写入 json
     save_to_json(load_info)
+
+    # 记录结束时间
+    end_time = time.time()
+
+    # 计算执行时间
+    execution_time = end_time - start_time
+
+    print("程序执行时间：", execution_time, "秒")
 
 
 if __name__ == '__main__':
