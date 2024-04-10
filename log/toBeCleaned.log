@@ -1,0 +1,63 @@
+2024-04-03 10:02:46,782 [http-bio-8080-exec-22] INFO  org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/service]-  PrivilegeInterceptor ====backurl===http://10.4.10.84:8080/service/query/searchPoints
+  2024-04-03 10:02:46 [com.ideal.common.mysqlUtil.utils.DynamicDataSourceAspect changeDataSource]-[INFO] Use DataSource : mysqlDataSource > void com.ideal.wtquery.dao.LogDao.insertBusLog(LogBusEntity)
+  2024-04-03 10:02:46 [com.ideal.common.mysqlUtil.utils.DynamicDataSourceAspect restoreDataSource]-[INFO] Revert DataSource : mysqlDataSource > void com.ideal.wtquery.dao.LogDao.insertBusLog(LogBusEntity)
+
+2024-04-03 10:02:46,822 [http-bio-8080-exec-33] INFO  org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/service]-  PrivilegeInterceptor ====backurl===http://10.4.10.84:8080/service/service/authority/query/checkCrmidLogin
+2024-04-03 10:02:46,851 [http-bio-8080-exec-33] INFO  org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/service]-  PrivilegeInterceptor ====backurl===http://10.4.10.84:8080/service/service/authority/query/getUserStar.do
+2024-04-03 10:02:46,860 [http-bio-8080-exec-22] INFO  org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/service]-  PrivilegeInterceptor ====backurl===http://10.4.10.84:8080/service/leftMenu/menuQuery
+  2024-04-03 10:02:46 [com.ideal.common.mysqlUtil.utils.DynamicDataSourceAspect changeDataSource]-[INFO] Use DataSource : mysqlDataSource > List com.ideal.menu.dao.LeftMenuDao.queryLeftMenu(Map)
+  2024-04-03 10:02:46 [com.ideal.common.mysqlUtil.utils.DynamicDataSourceAspect restoreDataSource]-[INFO] Revert DataSource : mysqlDataSource > List com.ideal.menu.dao.LeftMenuDao.queryLeftMenu(Map)
+
+2024-04-03 10:02:46,931 [http-bio-8080-exec-22] INFO  org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/service]-  PrivilegeInterceptor ====backurl===http://10.4.10.84:8080/service/commonmenu/query
+  2024-04-03 10:02:46 [com.ideal.common.mysqlUtil.utils.DynamicDataSourceAspect changeDataSource]-[INFO] Use DataSource : mysqlDataSource > List com.ideal.menu.dao.CommonFunctionDao.queryCommonFunctionGroup(String)
+  2024-04-03 10:02:46 [com.ideal.common.mysqlUtil.utils.DynamicDataSourceAspect restoreDataSource]-[INFO] Revert DataSource : mysqlDataSource > List com.ideal.menu.dao.CommonFunctionDao.queryCommonFunctionGroup(String)
+  2024-04-03 10:02:46 [com.ideal.common.mysqlUtil.utils.DynamicDataSourceAspect changeDataSource]-[INFO] Use DataSource : mysqlDataSource > List com.ideal.menu.dao.CommonFunctionDao.queryMenus(List)
+  2024-04-03 10:02:46 [com.ideal.common.mysqlUtil.utils.DynamicDataSourceAspect restoreDataSource]-[INFO] Revert DataSource : mysqlDataSource > List com.ideal.menu.dao.CommonFunctionDao.queryMenus(List)
+
+2024-04-03 10:02:46,955 [http-bio-8080-exec-22] INFO  org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/service]-  PrivilegeInterceptor ====backurl===http://10.4.10.84:8080/service/spz/gettoken======{"token":"aa06af10ff0a8c482dd2471177c3072d","code":"0","tid":"488d313efbbc15d5569cae025ff952ce"}
+
+2024-04-03 10:02:47,043 [http-bio-8080-exec-22] INFO  org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/]-
+2024-04-03 10:02:47 [org.springframework.web.servlet.PageNotFound noHandlerFound]-[WARN] No mapping found for HTTP request with URI [/image/189new/images/grey.gif] in DispatcherServlet with name 'springmvc'
+
+2024-04-03 10:02:47,161 [http-bio-8080-exec-22] INFO  org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/service]-  PrivilegeInterceptor ====backurl===http://10.4.10.84:8080/service/service/authority/query/setKefuValue
+2024-04-03 10:02:47,183 [http-bio-8080-exec-33] INFO  org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/service]-  PrivilegeInterceptor ====backurl===http://10.4.10.84:8080/service/service/authority/queryInfo/getMyPointsByCrmid.do
+2024-04-03 10:02:47,203 [http-bio-8080-exec-33] INFO  org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/]- shortId============favicon
+
+2024-04-03 10:02:47,931 [http-bio-8080-exec-12] INFO  org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/]- shortId============robots
+
+2024-04-03 10:02:47,931 [http-bio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/]- shortId============sitemap
+
+2024-04-03 10:03:22,990 [http-bio-8080-exec-90] INFO  org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/service]-  PrivilegeInterceptor ====backurl===http://10.4.10.84:8080/service/mytelecom/cusInfo
+2024-04-03 10:03:23,029 [http-bio-8080-exec-42] INFO  org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/service]-  PrivilegeInterceptor ====backurl===http://10.4.10.84:8080/service/service/authority/query/checkCrmidLogin
+2024-04-03 10:03:23,061 [http-bio-8080-exec-52] INFO  org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/service]-  PrivilegeInterceptor ====backurl===http://10.4.10.84:8080/service/service/authority/query/getUserStar.do
+2024-04-03 10:03:23,068 [http-bio-8080-exec-42] INFO  org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/service]-  PrivilegeInterceptor ====backurl===http://10.4.10.84:8080/service/leftMenu/menuQuery
+  2024-04-03 10:03:23 [com.ideal.common.mysqlUtil.utils.DynamicDataSourceAspect changeDataSource]-[INFO] Use DataSource : mysqlDataSource > List com.ideal.menu.dao.LeftMenuDao.queryLeftMenu(Map)
+  2024-04-03 10:03:23 [com.ideal.common.mysqlUtil.utils.DynamicDataSourceAspect restoreDataSource]-[INFO] Revert DataSource : mysqlDataSource > List com.ideal.menu.dao.LeftMenuDao.queryLeftMenu(Map)
+
+2024-04-03 10:03:23,133 [http-bio-8080-exec-42] INFO  org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/service]-  PrivilegeInterceptor ====backurl===http://10.4.10.84:8080/service/commonmenu/query
+  2024-04-03 10:03:23 [com.ideal.common.mysqlUtil.utils.DynamicDataSourceAspect changeDataSource]-[INFO] Use DataSource : mysqlDataSource > List com.ideal.menu.dao.CommonFunctionDao.queryCommonFunctionGroup(String)
+  2024-04-03 10:03:23 [com.ideal.common.mysqlUtil.utils.DynamicDataSourceAspect restoreDataSource]-[INFO] Revert DataSource : mysqlDataSource > List com.ideal.menu.dao.CommonFunctionDao.queryCommonFunctionGroup(String)
+  2024-04-03 10:03:23 [com.ideal.common.mysqlUtil.utils.DynamicDataSourceAspect changeDataSource]-[INFO] Use DataSource : mysqlDataSource > List com.ideal.menu.dao.CommonFunctionDao.queryMenus(List)
+  2024-04-03 10:03:23 [com.ideal.common.mysqlUtil.utils.DynamicDataSourceAspect restoreDataSource]-[INFO] Revert DataSource : mysqlDataSource > List com.ideal.menu.dao.CommonFunctionDao.queryMenus(List)
+
+2024-04-03 10:03:23,156 [http-bio-8080-exec-42] INFO  org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/service]-  PrivilegeInterceptor ====backurl===http://10.4.10.84:8080/service/spz/gettoken======{"token":"aa06af10ff0a8c482dd2471177c3072d","code":"0","tid":"488d313efbbc15d5569cae025ff952ce"}
+
+2024-04-03 10:03:23,248 [http-bio-8080-exec-42] INFO  org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/]-
+2024-04-03 10:03:23 [org.springframework.web.servlet.PageNotFound noHandlerFound]-[WARN] No mapping found for HTTP request with URI [/image/189new/images/grey.gif] in DispatcherServlet with name 'springmvc'
+
+2024-04-03 10:03:23,359 [http-bio-8080-exec-42] INFO  org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/service]-  PrivilegeInterceptor ====backurl===http://10.4.10.84:8080/service/service/authority/query/setKefuValue
+2024-04-03 10:03:23,421 [http-bio-8080-exec-42] INFO  org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/]- shortId============favicon
+
+2024-04-03 10:03:23,514 [http-bio-8080-exec-56] INFO  org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/service]-  PrivilegeInterceptor ====backurl===http://10.4.10.84:8080/service/test/eopTesteop.CapCustomer
+{&quot;custNumber&quot;:&quot;202136104526&quot;}
+
+2024-04-03 10:03:23,544 [http-bio-8080-exec-52] INFO  org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/service]-  PrivilegeInterceptor ====backurl===http://10.4.10.84:8080/service/my/basicinfo.doeop===>eop.CapCustomer
+入参===>{"custNumber":"202136104526"}
+  2024-04-03 10:03:23 [com.ideal.common.mysqlUtil.utils.DynamicDataSourceAspect changeDataSource]-[INFO] Use DataSource : mysqlDataSource > void com.ideal.common.dao.LogBeanDao.insertLogBeanNew(LogBean)
+  2024-04-03 10:03:23 [com.ideal.common.mysqlUtil.utils.DynamicDataSourceAspect restoreDataSource]-[INFO] Revert DataSource : mysqlDataSource > void com.ideal.common.dao.LogBeanDao.insertLogBeanNew(LogBean)
+
+2024-04-03 10:03:23,567 [http-bio-8080-exec-52] INFO  org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/service]-  PrivilegeInterceptor ====backurl===http://10.4.10.84:8080/service/spz/gettoken======{"token":"aa06af10ff0a8c482dd2471177c3072d","code":"0","tid":"488d313efbbc15d5569cae025ff952ce"}
+
+org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/service]-  PrivilegeInterceptor ====backurl===http://10.4.10.84:8080/service/query/searchPoints
+Use DataSource : mysqlDataSource > void com.ideal.wtquery.dao.LogDao.insertBusLog(LogBusEntity)
+Revert DataSource : mysqlDataSource > void com.ideal.wtquery.dao.LogDao.insertBusLog(LogBusEntity)
