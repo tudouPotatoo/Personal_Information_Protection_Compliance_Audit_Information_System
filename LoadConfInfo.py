@@ -6,6 +6,7 @@ import xmlContent
 import xmlMatch
 from rapidfuzz.process import extractOne
 import time
+import logMatch
 
 def get_filepath_list(directory: str) -> List[str]:
     """
@@ -78,6 +79,8 @@ def search(content, key, file_type) -> bool:
             return False
     elif extension == "xml":
         return xmlMatch.match_xml(content, key)
+    elif extension == "log":
+        return logMatch.match(content,key)
 
 def search2(content, key) -> bool:
     # 内容匹配，后续工作重点，调研
@@ -145,8 +148,8 @@ def main():
 
     load_info = {}
     # Log_file_name = "./log/log.xml"
-    Log_file_name = "./log/log.csv"
-    # Log_file_name = "./log/log(big).csv"
+    Log_file_name = "./log/cleaned.log"
+    #Log_file_name = "./log/log(big).csv"
     # 1 读取配置信息到 load_info 中
     load_conf_info(load_info)
 
