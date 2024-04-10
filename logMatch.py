@@ -45,17 +45,34 @@ def bert_vec(text):
         return np.array(bert_cls_hidden_state[0].detach().numpy())
 
 
-def match(sentences, keyword) ->tuple:
-    keyword_vec = bert_vec(keyword)
-    similarities_dict = {} # 创建空字典，用于存储相似度
-    for sentence in sentences:
-        if sentence.strip():  # 确保句子不只是空格
-            vec = bert_vec(sentence)
+"""
+找和短句最相似的keyword并返回最大相似度和对应的keyword
+"""
+def match(sentence, keywords,jsonItems) ->tuple:
+    #keyword_vec = bert_vec(keyword)
+    # keyword_vectors = [bert_vec(keyword) for keyword in keywords]
+    if sentence.strip():  # 确保句子不只是空格
+        vec = bert_vec(sentence)
+        maxSimilarity = 0
+        matchKeyword = ''
+        matchJson = ''
+        # for  keyword_vec in enumerate(keyword_vectors, start=1):
+        # for keyword in enumerate(keywords, start=1):
+        for i in range(len(keywords)):
+            keyword = keywords[i]
+            keyword_vec = bert_vec(keyword)
             similarity = similar_count(vec, keyword_vec, model="cos")
-            similarities_dict[sentence] = similarity
+            if maxSimilarity < similarity:
+                 maxSimilarity = similarity
+                 matchKeyword = keyword
+                 matchJson = jsonItems[i]
+            #similarities_dict[keyword_vec] = similarity
+    
+    return matchKeyword,maxSimilarity,matchJson
 
 
-    sorted_similarity = sorted(similarities_dict.items(), key=lambda x: x[1], reverse=True)
+
+    #sorted_similarity = sorted(similarities_dict.items(), key=lambda x: x[1], reverse=True)
     # item[0], ":", item[1]
-    return sorted_similarity[0]
+    #return sorted_similarity[0]
 

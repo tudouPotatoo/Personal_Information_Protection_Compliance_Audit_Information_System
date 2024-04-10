@@ -7,6 +7,8 @@ import xmlMatch
 from rapidfuzz.process import extractOne
 import time
 import logMatch
+import pandas as pd
+import DataCleaner
 
 def get_filepath_list(directory: str) -> List[str]:
     """
@@ -53,34 +55,36 @@ def save_to_json(info: dict) -> None:
         json.dump(info, file, ensure_ascii=False, indent=4)
 
 
-def search(content, key, file_type) -> bool:
+def search(sentence, key, file_type,jsonItems) -> bool:
     extension = file_type.lower()
     if extension == "csv":
 
         # 遍历content中的每一个键，找到与参数key匹配度最高的那个键
         # 如果这个匹配值>阈值，则认为是同一个键，如果对应的列存在内容，则返回true
-        matchResult = extractOne(key, content.keys())
-        matchKey = matchResult[0]
-        matchRatio = matchResult[1]
+        # matchResult = extractOne(key, content.keys())
+        # matchKey = matchResult[0]
+        # matchRatio = matchResult[1]
 
-        if matchRatio >= 60:
-            print("matchKey:", matchKey, "; key:", key, "; ratio:", matchRatio)
-            # 获取key对应的value
-            value = content.get(matchKey)
-            # 遍历value中的每一个内容
-            if value is not None:
-                for item in value:
-                    # 如果内容不为空/空白符 说明有内容 则返回true
-                    if item.strip():
-                        return True
-            # 如果所有行都为空 则说明没有内容 返回false
-            return False
-        else:
-            return False
+        # if matchRatio >= 60:
+        #     print("matchKey:", matchKey, "; key:", key, "; ratio:", matchRatio)
+        #     # 获取key对应的value
+        #     value = content.get(matchKey)
+        #     # 遍历value中的每一个内容
+        #     if value is not None:
+        #         for item in value:
+        #             # 如果内容不为空/空白符 说明有内容 则返回true
+        #             if item.strip():
+        #                 return True
+        #     # 如果所有行都为空 则说明没有内容 返回false
+        #     return False
+        # else:
+        #     return False
+        pass
     elif extension == "xml":
-        return xmlMatch.match_xml(content, key)
+        # return xmlMatch.match_xml(content, key)
+        pass
     elif extension == "log":
-        return logMatch.match(content,key)
+        return logMatch.match(sentence,key,jsonItems)
 
 def search2(content, key) -> bool:
     # 内容匹配，后续工作重点，调研
@@ -99,6 +103,12 @@ def extract_content(filename) -> Any:
     elif extension == "xml":
         # 获取文件对象
         return xmlContent.content_xml(filename)
+    elif extension == "log":
+        with open(filename, 'r', encoding='utf-8') as f:
+            lines = f.readlines()
+        return lines
+
+
 
 
 def read_csv_to_map(file_path):
@@ -129,44 +139,47 @@ def process(Log_file_name: str, load_info: dict):
     """
     # 1 提取日志内容
     content = extract_content(Log_file_name)
-    # 遍历一级标题及其对应的vale
-    for key, value in load_info.items():
-        # 遍历二级标题及其对应的value
-        for key_2, value_2 in value.items():
+    # # 遍历一级标题及其对应的vale
+    # for key, value in load_info.items():
+    #     # 遍历二级标题及其对应的value
+    #     for key_2, value_2 in value.items():
             # 2 设计匹配机制，将匹配后的信息写入 load_info 中
-            cur_key = str(key) + '_' + str(key_2)
-            extension = Log_file_name.split(".")[-1].lower()
-            if search(content, cur_key, extension) is True:
-                load_info[key][key_2]["status"] = 1
-            else:
-                load_info[key][key_2]["status"] = 0
+
+    file_path = '/文本匹配的副本/文本匹配的副本1-11.xlsx'              # 请替换为您的文件路径
+    keywords_df = pd.read_excel(file_path, engine='openpyxl')
+    cur_key = keywords_df['Keywords'].dropna().tolist() 
+    jsonItems = keywords_df['Json字段0'].dropna().tolist() 
+    extension = Log_file_name.split(".")[-1].lower()
+    for sentence in content:
+        result = search(sentence, cur_key, extension,jsonItems)
+        keys = result[2].split("_", 1)
+        key0 = keys[0]
+        key1 = keys[1]
+        if result[1] > 0.8:
+            load_info[key0][key1]["status"] = 1  
+        else:
+            load_info[key0][key1]["status"] = 0              
 
 
 def main():
-    # 记录开始时间
-    start_time = time.time()
+    # 记录开始时间 start_time = time.time()
 
     load_info = {}
-    # Log_file_name = "./log/log.xml"
-    Log_file_name = "./log/cleaned.log"
-    #Log_file_name = "./log/log(big).csv"
+
+    # 原始日志文件
+    Log_file_name = "./log/toBeCleaned.log"
+    clean_log_file_name = "./log/clean.log"
+    # 清洗数据
+    DataCleaner.process_log_file(Log_file_name, clean_log_file_name)
+
     # 1 读取配置信息到 load_info 中
     load_conf_info(load_info)
 
     # 2 读取日志文件，匹配信息
-    process(Log_file_name, load_info)
+    process(clean_log_file_name, load_info)
 
     # 3 将 load_info 写入 json
     save_to_json(load_info)
-
-    # 记录结束时间
-    end_time = time.time()
-
-    # 计算执行时间
-    execution_time = end_time - start_time
-
-    print("程序执行时间：", execution_time, "秒")
-
 
 if __name__ == '__main__':
     main()
