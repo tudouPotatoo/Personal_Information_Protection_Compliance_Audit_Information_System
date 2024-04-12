@@ -1,0 +1,5 @@
+2024-04-03 10:02:47,931 [http-bio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/]- 用户同意授权个人信息：true
+2024-04-03 10:02:47,931 [http-bio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/]- 用户重新同意授权个人信息：true
+2024-04-03 10:02:47,931 [http-bio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/]- 用户撤回同意授权个人信息：true
+2024-04-03 10:02:47,931 [http-bio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/]- 用户允许记录同意操作：true
+2024-04-03 10:02:47,931 [http-bio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/]- 用户同意个人信息被用于与“个⼈信息的收集”条款所声称的⽬的具有直接或合理关联的场景：true

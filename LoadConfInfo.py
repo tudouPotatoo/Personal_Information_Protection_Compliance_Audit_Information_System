@@ -3,9 +3,6 @@ import os
 from typing import List, Any
 import csv
 import xmlContent
-import xmlMatch
-from rapidfuzz.process import extractOne
-import time
 import logMatch
 import pandas as pd
 import DataCleaner
@@ -108,9 +105,6 @@ def extract_content(filename) -> Any:
             lines = f.readlines()
         return lines
 
-
-
-
 def read_csv_to_map(file_path):
     """
     将csv文件转化为map
@@ -145,17 +139,22 @@ def process(Log_file_name: str, load_info: dict):
     #     for key_2, value_2 in value.items():
             # 2 设计匹配机制，将匹配后的信息写入 load_info 中
 
-    file_path = '/文本匹配的副本/文本匹配的副本1-11.xlsx'              # 请替换为您的文件路径
+    file_path = '1-11.xlsx'              # 请替换为您的文件路径
     keywords_df = pd.read_excel(file_path, engine='openpyxl')
     cur_key = keywords_df['Keywords'].dropna().tolist() 
     jsonItems = keywords_df['Json字段0'].dropna().tolist() 
     extension = Log_file_name.split(".")[-1].lower()
     for sentence in content:
-        result = search(sentence, cur_key, extension,jsonItems)
+        result = search(sentence.strip(), cur_key, extension,jsonItems)
         keys = result[2].split("_", 1)
         key0 = keys[0]
         key1 = keys[1]
-        if result[1] > 0.8:
+        print("日志语句：", "【", sentence.strip(), "】")
+        print("匹配到的keyword：", result[0])
+        print("相似程度：", result[1])
+        print("对应的json项：", result[2])
+        print("--------------------------------------")
+        if result[1] > 0.75:
             load_info[key0][key1]["status"] = 1  
         else:
             load_info[key0][key1]["status"] = 0              
@@ -167,7 +166,10 @@ def main():
     load_info = {}
 
     # 原始日志文件
-    Log_file_name = "./log/toBeCleaned.log"
+    # Log_file_name = "./log/toBeCleaned.log"
+    # Log_file_name = "./log/StrongRelated.log"
+    # Log_file_name = "log/SemanticsRelated.log"
+    Log_file_name = 'log/WeakRelated.log'
     clean_log_file_name = "./log/clean.log"
     # 清洗数据
     DataCleaner.process_log_file(Log_file_name, clean_log_file_name)
